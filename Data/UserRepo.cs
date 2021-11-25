@@ -7,7 +7,9 @@ namespace dotnet_login.Data
     {
         // inject context
         private readonly UserContext _context;
+
         public UserRepo(UserContext context)
+        
         {
             _context = context;
         }

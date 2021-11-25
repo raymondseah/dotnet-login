@@ -25,6 +25,7 @@ namespace dotnet_login.Controllers
         [HttpPost("register")]
         public IActionResult Register(RegisterDto dto)
         {
+            Console.Write(Response);
             var user = new User
             {
                 Name = dto.Name,
@@ -32,7 +33,11 @@ namespace dotnet_login.Controllers
                 Password = BCrypt.Net.BCrypt.HashPassword(dto.Name)
             };
 
-            return Created("Sucess", _repo.Create(user));
+            return Created("Success", new
+            {
+                message = "Created",
+                data = _repo.Create(user)
+            });
 
         }
 
@@ -53,12 +58,13 @@ namespace dotnet_login.Controllers
             // just to get from backend, front end only get and send
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
-                HttpOnly = true
+                HttpOnly = false
             });
 
             return Ok(new
             {
-                message = "success"
+                message = "success",
+                jwt = jwt
             });
         }
 
@@ -81,9 +87,18 @@ namespace dotnet_login.Controllers
 
         }
 
+        [HttpGet("user/{id}")]
+        public IActionResult GetUserById(int id)
+        {
+            var user = _repo.GetById(id);
+            return Ok(user);
+
+        }
+
         [HttpPost("logout")]
         public IActionResult LogOut()
         {
+            Console.Write(Response);
             Response.Cookies.Delete("jwt");
 
             return Ok(new
@@ -91,5 +106,6 @@ namespace dotnet_login.Controllers
                 message = "Successfully Logged Out"
             });
         }
+        
     }
 }

@@ -31,6 +31,8 @@ namespace dotnet_login
         {
             services.AddCors();
             services.AddScoped<IUserRepo, UserRepo>();
+            services.AddScoped<IProductRepo, ProductRepo>();
+
             services.AddScoped<JwtService>();
 
             services.AddDbContext<UserContext>(opt => opt.UseSqlServer
@@ -53,16 +55,23 @@ namespace dotnet_login
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "dotnet_login v1"));
             }
 
-            app.UseHttpsRedirection();
+            // app.UseCors(options => options
+            // .WithOrigins(new[] { "http://localhost:3000", "http://localhost:8080", "http://localhost:4200" })
+            //     .AllowAnyHeader()
+            //     .AllowAnyMethod()
+            //     .AllowCredentials()
+            // );
+            app.UseCors(x => x
+    .AllowAnyMethod() 
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+    .AllowCredentials()); // allow credentials
+
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseCors(options => options
-            .WithOrigins(new[] { "http://localhost:3000", "http://localhost:8080", "http://localhost:4200" })
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .AllowCredentials()
-            );
+
 
             app.UseAuthorization();
 

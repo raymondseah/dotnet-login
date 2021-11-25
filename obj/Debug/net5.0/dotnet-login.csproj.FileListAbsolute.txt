@@ -58,3 +58,5 @@
 /Users/raymond.seah/Desktop/projects/dotnet-login/bin/Debug/net5.0/Humanizer.dll
 /Users/raymond.seah/Desktop/projects/dotnet-login/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/raymond.seah/Desktop/projects/dotnet-login/bin/Debug/net5.0/BCrypt.Net-Next.dll
+/Users/raymond.seah/Desktop/projects/dotnet-login/bin/Debug/net5.0/AutoMapper.dll
+/Users/raymond.seah/Desktop/projects/dotnet-login/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
