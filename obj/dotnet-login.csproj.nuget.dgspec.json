@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/raymond.seah/Desktop/projects/dotnet-login/dotnet-login.csproj": {}
+    "/Users/seahweichong/Desktop/Projects/Personal/dotnet-login/dotnet-login.csproj": {}
   },
   "projects": {
-    "/Users/raymond.seah/Desktop/projects/dotnet-login/dotnet-login.csproj": {
+    "/Users/seahweichong/Desktop/Projects/Personal/dotnet-login/dotnet-login.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/raymond.seah/Desktop/projects/dotnet-login/dotnet-login.csproj",
+        "projectUniqueName": "/Users/seahweichong/Desktop/Projects/Personal/dotnet-login/dotnet-login.csproj",
         "projectName": "dotnet-login",
-        "projectPath": "/Users/raymond.seah/Desktop/projects/dotnet-login/dotnet-login.csproj",
-        "packagesPath": "/Users/raymond.seah/.nuget/packages/",
-        "outputPath": "/Users/raymond.seah/Desktop/projects/dotnet-login/obj/",
+        "projectPath": "/Users/seahweichong/Desktop/Projects/Personal/dotnet-login/dotnet-login.csproj",
+        "packagesPath": "/Users/seahweichong/.nuget/packages/",
+        "outputPath": "/Users/seahweichong/Desktop/Projects/Personal/dotnet-login/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/raymond.seah/.nuget/NuGet/NuGet.Config"
+          "/Users/seahweichong/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -75,7 +75,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -87,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

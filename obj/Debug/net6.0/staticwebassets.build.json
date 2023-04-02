@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "maoNtWagAgJyCxF1u9qLGt5W1eFNbCV87BM+viGaDBo=",
+  "Source": "dotnet-login",
+  "BasePath": "_content/dotnet-login",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
